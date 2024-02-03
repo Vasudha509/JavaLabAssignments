@@ -26,21 +26,20 @@ class SY2023BIT509 {
 		int iRegLength = registrations.length;
 		
 		if (iRegLength <= 0)
-         		return iValidRegCount;  // if the registrations array is empty valid registration numbers will be 0.
+          return iValidRegCount;  // if the registrations array is empty 
           
-    		for (int i = 0; i < iRegLength; i++) {
-         		String sYear = registrations[i].substring(0, 2);
-         		String sDept = registrations[i].substring(4, 7);
+    for (int i = 0; i < iRegLength; i++) {
+         String sYear = registrations[i].substring(0, 2);
+         String sDept = registrations[i].substring(4, 7);
          
-         		// valid for the year 2000 onward.
-         		if (sYear.startsWith("20")) {
-				// checking the valid department or not.
-            			if (sDept.equalsIgnoreCase("bit") || sDept.equalsIgnoreCase("bcs") || sDept.equalsIgnoreCase("bce") || sDept.equalsIgnoreCase("bme")) {
-              				iValidRegCount++;
-            			} 
-         		} 
-    		}	
-		
+         // valid for the year 2000 onward.
+         if (sYear.startsWith("20")) {
+            // checking the valid department or not.
+            if (sDept.equalsIgnoreCase("bit") || sDept.equalsIgnoreCase("bcs") || sDept.equalsIgnoreCase("bce") || sDept.equalsIgnoreCase("bme")) {
+              iValidRegCount++;
+            } 
+         } 
+    }	 	  
 		return iValidRegCount;	
 	}
 }
